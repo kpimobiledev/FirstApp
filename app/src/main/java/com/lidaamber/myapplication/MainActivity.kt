@@ -1,9 +1,8 @@
 package com.lidaamber.myapplication
 
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,14 +10,36 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        greetButton.setOnClickListener {
-            val intent = Intent(this@MainActivity, GreetingsActivity::class.java)
+        Log.d(LOG_TAG, "onCreate")
+    }
 
-            val name = nameEditText.text.toString()
-            intent.putExtra(GreetingsActivity.EXTRA_NAME, name)
+    override fun onStart() {
+        super.onStart()
+        Log.d(LOG_TAG, "onStart")
+    }
 
-            startActivity(intent)
-        }
+    override fun onResume() {
+        super.onResume()
+        Log.d(LOG_TAG, "onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(LOG_TAG, "onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(LOG_TAG, "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(LOG_TAG, "onDestroy")
+    }
+
+    companion object {
+        const val LOG_TAG = "Lifecycle"
     }
 }
 
