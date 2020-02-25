@@ -1,7 +1,7 @@
 package com.lidaamber.myapplication
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -11,8 +11,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        pressButton.setOnClickListener {
-            Toast.makeText(this, R.string.button_pressed, Toast.LENGTH_LONG).show()
+        greetButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, GreetingsActivity::class.java)
+
+            val name = nameEditText.text.toString()
+            intent.putExtra(GreetingsActivity.EXTRA_NAME, name)
+
+            startActivity(intent)
         }
     }
 }

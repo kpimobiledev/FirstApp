@@ -2,4 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="press">Press me</string>
     <string name="button_pressed">I pressed the button</string>
+    <string name="input_name">Input your name</string>
+    <string name="greet">Greet</string>
+    <string name="greetings">Greetings, %s!</string>
 </resources>
