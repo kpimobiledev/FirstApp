@@ -7,9 +7,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:hint="@string/input_name" />
+
+    <Button
+        android:id="@+id/greetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lifecycle_demo" />
-
+        android:text="@string/greet" />
 </LinearLayout>

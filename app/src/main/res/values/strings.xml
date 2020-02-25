@@ -6,4 +6,6 @@
     <string name="greet">Greet</string>
     <string name="greetings">Greetings, %s!</string>
     <string name="lifecycle_demo">Lifecycle demo</string>
+    <string name="channel_name">First service test</string>
+    <string name="channel_description">This channel demonstrates dummy service notifications</string>
 </resources>
